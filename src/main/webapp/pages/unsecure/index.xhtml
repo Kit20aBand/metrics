@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<h:outputLabel value="#{msg.File}" />
+		<h3>Welcome to Web App</h3>
+		<h:form>
+		<h:commandLink value="en" action="#{localeBean.setLanguage('en')}" />
+|
+		<h:commandLink value="fr" action="#{localeBean.setLanguage('fr')}" />
+		</h:form>
+		<h3><h:outputText value="#{i18n['File']}" /></h3>
+	</ui:define>
+</ui:composition>
